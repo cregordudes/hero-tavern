@@ -123,6 +123,19 @@ export default function MiniDrawer() {
 
    const [open, setOpen] = React.useState(initialScreen);
    const [isLargeScreen, setIsLargeScreen] = React.useState(initialScreen);
+   const [isScrolled, setIsScrolled] = React.useState(false);
+
+   React.useEffect(() => {
+      const handleScroll = () => {
+         if (window.scrollY > 600) {
+            setIsScrolled(true);
+         } else {
+            setIsScrolled(false);
+         }
+      };
+      window.addEventListener("scroll", handleScroll);
+      return () => window.removeEventListener("scroll", handleScroll);
+   }, []);
 
    React.useEffect(() => {
       const handleResize = () => {
@@ -154,7 +167,18 @@ export default function MiniDrawer() {
    return (
       <>
          <CssBaseline />
-         <AppBar position="fixed" open={open}>
+         <AppBar
+            position="fixed"
+            open={open}
+            sx={{
+               backgroundColor: isScrolled
+                  ? "rgba(61 90 129 / 0.75)"
+                  : "transparent",
+               backdropFilter: isScrolled ? "blur(4px)" : "none",
+               transition:
+                  "background-color 0.3s ease, backdrop-filter 0.3s ease",
+            }}
+         >
             <Toolbar>
                <Stack
                   sx={[

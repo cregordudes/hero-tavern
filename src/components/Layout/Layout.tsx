@@ -13,9 +13,9 @@ const Layout = () => {
             display: "flex",
             background:
                "linear-gradient(228deg, rgba(7,30,61,1) 0%, rgba(12,46,92,1) 100%);",
+            backgroundSize: "cover",
             //backgroundImage: `url(${Background})`,
             //backgroundSize: " 100% 100%",
-            backgroundSize: "cover",
             //backgroundRepeat: "no-repeat",
          }}
       >

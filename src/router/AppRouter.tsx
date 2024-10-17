@@ -43,7 +43,25 @@ const AppRouter = () => {
                }
             />
             <Route
+               path="/games"
+               element={
+                  <ProtectedRoute isAuthenticated={isAuthenticated}>
+                     <Home />
+                  </ProtectedRoute>
+               }
+            />
+            /
+            <Route
                path="/game/:id"
+               element={
+                  <ProtectedRoute isAuthenticated={isAuthenticated}>
+                     <Home />
+                  </ProtectedRoute>
+               }
+            />
+            /
+            <Route
+               path="/game/:id/about"
                element={
                   <ProtectedRoute isAuthenticated={isAuthenticated}>
                      <Home />
