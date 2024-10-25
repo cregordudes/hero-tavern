@@ -72,18 +72,12 @@ const RoomCard = ({
                </span>
             </div>
 
-            <div
-               className={`${
-                  users.length >= 3 ? "justify-evenly" : "justify-start"
-               } relative mt-2 flex items-center `}
-            >
+            <div className={` justify-start relative mt-2 flex items-center `}>
                <div
                   //style={{ flexGrow: "3" }}
-                  className={`${
-                     users.length >= 3
-                        ? "w-3/6 justify-evenly"
-                        : "w-1/3 justify-evenly"
-                  } flex items-center gap-2`}
+                  className={`
+                    
+                  flex items-center gap-2`}
                >
                   {users.slice(0, 3).map((user, idx) => (
                      <div
@@ -107,7 +101,7 @@ const RoomCard = ({
                </div>
 
                <div
-                  className="flex flex-col w-3/6 items-center"
+                  className="flex flex-col  items-center"
                   //style={{ flexGrow: "1" }}
                >
                   {users.length > 3 && (
