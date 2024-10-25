@@ -18,7 +18,7 @@ import MailIcon from "@mui/icons-material/Mail";
 import { Box, CssBaseline, Stack, Typography } from "@mui/material";
 import tavernTheme from "../../theme/theme";
 import userImage from "../../assets/userImg.png";
-import { NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 
 const drawerWidth = 240;
 
@@ -241,9 +241,11 @@ export default function MiniDrawer() {
          >
             <DrawerHeader>
                {open && (
-                  <Typography variant="h6" color="white">
-                     Hero Tavern
-                  </Typography>
+                  <Link to="/">
+                     <Typography variant="h6" color="white">
+                        Hero Tavern
+                     </Typography>
+                  </Link>
                )}
 
                <IconButton

@@ -3,7 +3,7 @@ import { GameCardProps } from "../../types";
 
 const GameCard = ({ title, online, image, link, tags }: GameCardProps) => {
    return (
-      <div className="bg-slate-900 w-full rounded-lg mb-4 p-2 grid gap-2">
+      <div className="bg-slate-900 max-w-sm w-full rounded-lg mb-4 p-2 grid gap-2">
          <img
             src={image}
             alt={title}

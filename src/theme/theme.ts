@@ -9,9 +9,10 @@ const tavernTheme = createTheme({
          contrastText: "#FBFBFB",
       },
       secondary: {
-         main: "#202020",
-         light: "#27304B",
-         dark: "#768192",
+         main: "#27304B",
+         light: "#808080",
+         dark: "#21232A",
+         contrastText: "#FBFBFB",
       },
       error: {
          main: "#FB773C",

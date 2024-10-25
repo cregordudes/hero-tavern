@@ -1,14 +1,20 @@
 import bannerBg from "../assets/bannerBg.jpg";
 import game1 from "../assets/game1.png";
 import game2 from "../assets/game2.jpg";
-import game3 from "../assets/game3.jpg";
+import game3 from "../assets/game8.jpg";
 import game4 from "../assets/game4.jpg";
 import game5 from "../assets/game5.jpg";
 import game6 from "../assets/game6.jpg";
 import game7 from "../assets/game7.jpg";
-//import game8 from "../assets/game8.jpg";
+import DefaultUser from "../assets/defaultUser.svg";
 
-import { BannerProps, GameCardProps } from "../types";
+import {
+   BannerProps,
+   GameCardProps,
+   GameMasterType,
+   RoomType,
+   UserType,
+} from "../types";
 
 export const gameList: GameCardProps[] = [
    {
@@ -73,5 +79,118 @@ export const bannerList: BannerProps[] = [
       users: "14.4k",
       image: game7,
       links: ["/game/4", "/game/4/about"],
+   },
+];
+
+export const user1: UserType = {
+   id: "1",
+   username: "Admin",
+   email: "admin@tavern",
+   role: "Admin",
+   token: "token",
+   avatar: "",
+};
+
+export const user2: UserType = {
+   id: "2",
+   username: "Egor",
+   email: "Egor@tavern",
+   role: "user",
+   token: "token",
+   avatar: "",
+};
+
+export const roomList: RoomType[] = [
+   {
+      id: "1",
+      name: "Path to glory",
+      image: bannerBg,
+      link: "/room/1",
+      creator: user1,
+      users: [user1, user2, user2, user2, user2, user2],
+      createdAt: "22/10/2024",
+      status: "Active",
+      tags: ["DND", "Tactics"],
+   },
+   {
+      id: "2",
+      name: "Some Other Game",
+      image: game7,
+      link: "/room/2",
+      creator: user1,
+      users: [user1, user2],
+      createdAt: "22/10/2024",
+      status: "Finished",
+      tags: ["Tag"],
+   },
+   {
+      id: "3",
+      name: "Game 3",
+      image: game1,
+      link: "/room/3",
+      creator: user1,
+      users: [user1, user2],
+      createdAt: "22/10/2024",
+      status: "Inactive",
+      tags: ["Tag"],
+   },
+   {
+      id: "4",
+      name: "Long Name Lorem Ipsium Test",
+      image: game5,
+      link: "/room/4",
+      creator: user1,
+      users: [user1, user2, user1, user2, user1, user2, user1, user2],
+      createdAt: "22/10/2024",
+      status: "Active",
+      tags: ["LOREMIPSiumDior", "Tactics", "Chanel Tag long"],
+   },
+];
+
+export const DMList: GameMasterType[] = [
+   {
+      id: "1",
+      username: "Egor",
+      image: DefaultUser,
+      price: 10,
+      rating: 5,
+      link: "/dm/1",
+      experience: 100,
+      description: "Some description",
+      gamesPlayed: 10,
+   },
+   {
+      id: "2",
+      username: "Admin",
+      image: DefaultUser,
+      price: 10,
+      rating: 5,
+      link: "/dm/2",
+      experience: 100,
+      description: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+      gamesPlayed: 10,
+   },
+   {
+      id: "3",
+      username: "Egor",
+      image: DefaultUser,
+      price: 10,
+      rating: 5,
+      link: "/dm/3",
+      experience: 100,
+      description:
+         "Lorem ipsum dolor sit amet consectetur adipisicing elit.Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+      gamesPlayed: 10,
+   },
+   {
+      id: "4",
+      username: "Admin",
+      image: DefaultUser,
+      price: 10,
+      rating: 5,
+      link: "/dm/4",
+      experience: 100,
+      description: "Some description",
+      gamesPlayed: 10,
    },
 ];

@@ -1,4 +1,4 @@
-import { ThemeProvider } from "styled-components";
+import { ThemeProvider } from "@mui/material/styles";
 import AppRouter from "./router/AppRouter";
 import tavernTheme from "./theme/theme";
 
