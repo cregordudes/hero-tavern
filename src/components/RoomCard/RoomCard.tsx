@@ -25,7 +25,6 @@ const RoomCard = ({
          className="bg-slate-900 min-h-[280px] max-w-full lg:max-w-lg xl:max-w-full rounded-lg mb-4 p-4 flex gap-4"
          id={id}
       >
-         {/* Left Section: Room Image */}
          <div className="w-1/2">
             <img
                src={image}
@@ -74,7 +73,6 @@ const RoomCard = ({
 
             <div className={` justify-start relative mt-2 flex items-center `}>
                <div
-                  //style={{ flexGrow: "3" }}
                   className={`
                     
                   flex items-center gap-2`}
@@ -100,10 +98,7 @@ const RoomCard = ({
                   ))}
                </div>
 
-               <div
-                  className="flex flex-col  items-center"
-                  //style={{ flexGrow: "1" }}
-               >
+               <div className="flex flex-col  items-center">
                   {users.length > 3 && (
                      <>
                         <div className="flex items-baseline ml-4 h-full ">
